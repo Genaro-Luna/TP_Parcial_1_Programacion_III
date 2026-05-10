@@ -6,14 +6,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         //d:aplicaion/dist/
+        index: resolve(__dirname, "index.html"),
+        storeHome: resolve(__dirname, "src/pages/store/home/home.html"),
+        storeCart: resolve(__dirname, "src/pages/store/cart/cart.html"),
         login: resolve(__dirname, "src/pages/auth/login/login.html"),
         registro: resolve(__dirname, "src/pages/auth/registro/registro.html"),
         adminHome: resolve(__dirname, "src/pages/admin/home/home.html"),
         clientHome: resolve(__dirname, "src/pages/client/home/home.html"),
         
-        index: resolve(__dirname, "index.html"),
-        storeHome: resolve(__dirname, "src/pages/store/home/home.html"),
-        storeCart: resolve(__dirname, "src/pages/store/cart/cart.html"),
       },
     },
   },

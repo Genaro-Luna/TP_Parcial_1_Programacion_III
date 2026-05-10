@@ -14,14 +14,14 @@ const checkAuth = () => {
 
   if (currentPath.includes("/admin/")) {
     if (user?.role !== "admin") {
-      window.location.href = "/src/pages/client/home/home.html";
+      window.location.href = "/src/pages/store/home/home.html";
     }
   }
 
   if (user && publicRoutes.some(route => currentPath.includes(route))) {
     const targetHome = user.role === "admin" 
-      ? "/src/pages/admin/home/home.html" 
-      : "/src/pages/client/home/home.html";
+      ? "/src/pages/store/home/home.html" 
+      : "/src/pages/store/home/home.html";
     window.location.href = targetHome;
   }
 };
